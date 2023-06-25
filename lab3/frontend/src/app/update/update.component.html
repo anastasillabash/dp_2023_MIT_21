@@ -1,0 +1,12 @@
+<div *ngIf="enti" class="update">
+
+    <h3>Update this list</h3>
+  
+    <div class="form">
+        <input type="hidden" [(ngModel)]="enti.id">
+        <input type="text" [(ngModel)]="enti.name"><br><br>
+        <input type="text" [(ngModel)]="enti.places"><br><br>
+        <input type="text" [(ngModel)]="enti.price"><br><br>
+        <button (click)="updateEntities()"> Update items </button>
+    </div>
+  </div>

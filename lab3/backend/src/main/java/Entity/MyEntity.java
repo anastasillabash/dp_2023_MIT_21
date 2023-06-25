@@ -3,15 +3,26 @@ package Entity;
 import java.io.Serializable;
 
 public class MyEntity implements Serializable {
+
+    private int id;
     private String name;
     private String places;
     private String price;
 
-    public MyEntity(String name, String places, String price) {
+    public MyEntity(int id, String name, String places, String price) {
+        this.id = id;
         this.name = name;
         this.places = places;
         this.price = price;
     }
+
+    public MyEntity(){
+
+    }
+
+    public int getId(){return id;}
+    public void setId(int id) {this.id = id;}
+
 
     public String getPlaces() {
         return places;
@@ -39,6 +50,6 @@ public class MyEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "{\"name\": \""+name+"\", \"places\":\""+places+"\", \"price\": \""+price+"}";
+        return "{\"id\":" + id +"{\"name\": \""+name+"\", \"places\":\""+places+"\", \"price\": \""+price+"}";
     }
 }

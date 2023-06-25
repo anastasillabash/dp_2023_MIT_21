@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Entity } from './interfaces/entity';
 import { Service1Service } from './seervices/service1.service';
 
@@ -7,11 +7,16 @@ import { Service1Service } from './seervices/service1.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'frontend';
+export class AppComponent implements OnInit{
+  title = "frontend";
   entityList:Entity[]=[];
 
+  
+
   constructor(private service:Service1Service){}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   getEntities():void{
     this.service.getEntities().subscribe(
@@ -42,6 +47,10 @@ export class AppComponent {
     console.log(this.places);
     console.log(this.price);
 
-    this.service.doPut(this.name, this.places, this.price);
+    //this.service.doPut(this.name, this.places, this.price);
   }
+
+  
+
+
 }

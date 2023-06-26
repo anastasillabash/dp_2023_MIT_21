@@ -49,9 +49,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/backend" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -61,7 +58,6 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="backend" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

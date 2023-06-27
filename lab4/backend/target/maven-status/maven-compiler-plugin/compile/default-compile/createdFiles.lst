@@ -1,8 +1,0 @@
-Entities\MyEntity.class
-jdbc\app.class
-Servlets\LabCRUDInterface.class
-jdbc\SqlCRUD.class
-jdbc\Connect.class
-Servlets\servlet.class
-Entities\Mock.class
-Servlets\Helper.class

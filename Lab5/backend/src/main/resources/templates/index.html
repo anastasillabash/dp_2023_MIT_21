@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+<div class="container">
+    <h1>Головна сторінка</h1>
+    <a href="add" class="add"> Додати новий тент</a>
+
+    <table cellpadding="20">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Img</th>
+            <th>Зробити</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="entity : ${listEntity}">
+            <td th:text="${entity.id}">ID</td>
+            <td th:text="${entity.name}">Name</td>
+            <td th:text="${entity.price}">Price</td>
+            <td><img th:src="${entity.img}" width="150" height="150"/></td>
+            <td>
+                <a th:href="@{/update/{id}(id=${entity.id})}">Update</a>
+                <br/><br/>
+                <a th:href="@{/delete/{id}(id=${entity.id})}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
